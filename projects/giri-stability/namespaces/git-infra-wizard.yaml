@@ -11,30 +11,25 @@ spec:
   limitRange:
     container:
       default:
-        cpu: 2m
-        memory: 2Mi
+        cpu: 2u
+        memory: 2047868928u
       defaultRequest:
-        cpu: 1m
-        memory: 1Mi
+        cpu: 1u
+        memory: 1024458752u
       max:
-        cpu: 2m
-        memory: 2Mi
+        cpu: 2u
+        memory: 2047868928u
       min:
-        cpu: 1m
-        memory: 1Mi
+        cpu: 1u
+        memory: 1024458752u
     pod:
       max:
-        cpu: 2m
-        memory: 2Mi
+        cpu: 2u
+        memory: 2047868928u
       min:
-        cpu: 1m
-        memory: 1Mi
+        cpu: 1u
+        memory: 1024458752u
   namespaceMeshPolicyParams: {}
-  networkPolicyParams: {}
-  placement:
-    labels:
-    - key: rafay.dev/clusterName
-      value: giri-mks-ns
   resourceQuotas:
     configMaps: "10"
     cpuLimits: 4m
