@@ -3,4 +3,13 @@ kind: Namespace
 metadata:
   name: qa
   project: giri-stability
-spec: {}
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: env
+      value: qa
+  resourceQuotas: {}
