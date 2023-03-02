@@ -3,4 +3,13 @@ kind: Namespace
 metadata:
   name: infra-wizard
   project: giri-stability
-spec: {}
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mks-ns
+  resourceQuotas: {}
