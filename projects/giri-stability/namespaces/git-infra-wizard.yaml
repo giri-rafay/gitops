@@ -5,31 +5,36 @@ metadata:
     l2: v2
   labels:
     l1: v1
-  name: git-infra-wizard
+  name: infra-wizard
   project: giri-stability
 spec:
   limitRange:
     container:
       default:
-        cpu: 2u
-        memory: 2047868928u
+        cpu: 2m
+        memory: 2Mi
       defaultRequest:
-        cpu: 1u
-        memory: 1024458752u
+        cpu: 1m
+        memory: 1Mi
       max:
-        cpu: 2u
-        memory: 2047868928u
+        cpu: 2m
+        memory: 2Mi
       min:
-        cpu: 1u
-        memory: 1024458752u
+        cpu: 1m
+        memory: 1Mi
     pod:
       max:
-        cpu: 2u
-        memory: 2047868928u
+        cpu: 2m
+        memory: 2Mi
       min:
-        cpu: 1u
-        memory: 1024458752u
+        cpu: 1m
+        memory: 1Mi
   namespaceMeshPolicyParams: {}
+  networkPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mks-ns
   resourceQuotas:
     configMaps: "10"
     cpuLimits: 4m
