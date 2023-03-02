@@ -11,11 +11,11 @@ spec:
   limitRange:
     container:
       default:
-        cpu: 1m
-        memory: 1Mi
-      defaultRequest:
         cpu: 2m
         memory: 2Mi
+      defaultRequest:
+        cpu: 1m
+        memory: 1Mi
       max:
         cpu: 2m
         memory: 2Mi
