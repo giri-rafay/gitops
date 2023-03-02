@@ -12,4 +12,8 @@ spec:
     container: {}
     pod: {}
   namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/logging
+      value: disabled
   resourceQuotas: {}
