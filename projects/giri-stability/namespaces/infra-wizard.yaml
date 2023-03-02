@@ -30,6 +30,7 @@ spec:
         cpu: 1m
         memory: 1Mi
   namespaceMeshPolicyParams: {}
+  networkPolicyParams: {}
   placement:
     labels:
     - key: rafay.dev/clusterName
