@@ -1,15 +1,50 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Namespace
 metadata:
+  annotations:
+    l2: v2
+  labels:
+    l1: v1
   name: infra-wizard
   project: giri-stability
 spec:
   limitRange:
-    container: {}
-    pod: {}
+    container:
+      default:
+        cpu: 1m
+        memory: 1Mi
+      defaultRequest:
+        cpu: 2m
+        memory: 2Mi
+      max:
+        cpu: 2m
+        memory: 2Mi
+      min:
+        cpu: 1m
+        memory: 1Mi
+    pod:
+      max:
+        cpu: 2m
+        memory: 2Mi
+      min:
+        cpu: 1m
+        memory: 1Mi
   namespaceMeshPolicyParams: {}
   placement:
     labels:
     - key: rafay.dev/clusterName
       value: giri-mks-ns
-  resourceQuotas: {}
+  resourceQuotas:
+    configMaps: "10"
+    cpuLimits: 4m
+    cpuRequests: 2m
+    memoryLimits: 2048Mi
+    memoryRequests: 1024Mi
+    persistentVolumeClaims: "10"
+    pods: "10"
+    replicationControllers: "10"
+    secrets: "10"
+    services: "10"
+    servicesLoadBalancers: "10"
+    servicesNodePorts: "10"
+    storageRequests: 100Gi
