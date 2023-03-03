@@ -11,4 +11,8 @@ spec:
     container: {}
     pod: {}
   namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mks-ns
   resourceQuotas: {}
