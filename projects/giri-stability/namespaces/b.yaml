@@ -7,3 +7,12 @@ spec:
   artifact:
     path:
       name: file://b/b.yaml
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mks-ns
+  resourceQuotas: {}
