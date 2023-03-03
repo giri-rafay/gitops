@@ -1,0 +1,9 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: b
+  project: giri-stability
+spec:
+  artifact:
+    path:
+      name: file://b/b.yaml
