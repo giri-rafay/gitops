@@ -4,5 +4,9 @@ metadata:
   name: rctl-ns1
   project: giri-stability
 spec:
+  limitRange:
+    container: {}
+    pod: {}
   namespaceMeshPolicyParams: {}
   networkPolicyParams: {}
+  resourceQuotas: {}
