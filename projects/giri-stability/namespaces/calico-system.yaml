@@ -19,3 +19,5 @@ spec:
     labels:
     - key: rafay.dev/clusterName
       value: giri-mks-ns
+    - key: rafay.dev/clusterName
+      value: giri-aks-stability
