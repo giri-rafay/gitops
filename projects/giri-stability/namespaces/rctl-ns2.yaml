@@ -1,0 +1,51 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    a1: v3
+    a2: v4
+  labels:
+    env: dev
+    priority: high
+    severity: low
+  name: rctl-ns2
+  project: giri-stability
+spec:
+  limitRange:
+    container:
+      default:
+        cpu: 2m
+        memory: 2Mi
+      defaultRequest:
+        cpu: 2m
+        memory: 2Mi
+      max:
+        cpu: 2m
+        memory: 2Mi
+      min:
+        cpu: 2m
+        memory: 2Mi
+      ratio:
+        cpu: 2
+        memory: 2
+    pod:
+      max:
+        cpu: 3m
+        memory: 2Mi
+      min:
+        cpu: 1m
+        memory: 1Mi
+      ratio:
+        cpu: 3
+        memory: 3
+  namespaceMeshPolicyParams: {}
+  networkPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mks-ns
+  resourceQuotas:
+    cpuLimits: 1m
+    cpuRequests: 2m
+    memoryLimits: 2Mi
+    memoryRequests: 2Mi
