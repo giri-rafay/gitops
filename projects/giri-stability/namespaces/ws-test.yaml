@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"k8smgmt.io/project":"giri-stability","name":"test"},"name":"ws-test"}}
+    logging.csp.vmware.com/fluentd-status: ""
+  labels:
+    k8smgmt.io/project: giri-stability
+    kubernetes.io/metadata.name: ws-test
+    name: test
+  name: ws-test
+  project: giri-stability
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mks-ns
