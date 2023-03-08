@@ -1,0 +1,25 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rep-drift-action: deny
+  labels:
+    kubernetes.io/metadata.name: ram-ns2
+    name: ram-ns2
+    ram1: v1
+    ram2: ""
+    rep-drift-reconcillation: enabled
+    rep-organization: q6kn4ml
+    rep-partner: rx28oml
+    rep-project: kv6ndgm
+  name: ram-ns2
+  project: giri-stability
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mks-ns
