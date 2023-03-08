@@ -5,6 +5,7 @@ metadata:
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"name":"test"},"name":"pj-test1"}}
   labels:
+    f: ff
     kubernetes.io/metadata.name: pj-test1
     name: test
   name: pj-test1
@@ -13,8 +14,12 @@ spec:
   drift:
     action: Deny
     enabled: true
+  limitRange:
+    container: {}
+    pod: {}
   namespaceMeshPolicyParams: {}
   placement:
     labels:
     - key: rafay.dev/clusterName
       value: giri-mks-ns
+  resourceQuotas: {}
